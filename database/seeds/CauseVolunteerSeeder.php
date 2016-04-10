@@ -18,8 +18,8 @@ class CauseVolunteerSeeder extends Seeder
         
         do {
             DB::table('cause_volunteer')->insert([
-                'cause_id'->$causes->random(),
-                'volunteer_id'->$volunteers->random(),
+                'cause_id'=>$causes->random(),
+                'volunteer_id'=>$volunteers->random(),
             ]);
             
             $counter++;
