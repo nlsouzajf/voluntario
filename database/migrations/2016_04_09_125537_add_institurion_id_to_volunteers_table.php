@@ -12,7 +12,7 @@ class AddInstiturionIdToVolunteersTable extends Migration
      */
     public function up()
     {
-        Schema::table('volunteers', function (Blueprint $table) {
+        Schema::create('volunteers', function (Blueprint $table) {
             $table->integer('institution_id')
                 ->unsigned()
                 ->nullable()
