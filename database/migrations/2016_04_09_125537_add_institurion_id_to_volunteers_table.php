@@ -11,16 +11,16 @@ class AddInstiturionIdToVolunteersTable extends Migration
      * @return void
      */
     public function up()
-    {
-        Schema::create('volunteers', function (Blueprint $table) {
-            $table->integer('institution_id')
-                ->unsigned()
-                ->nullable()
-                ->after('email');
-                
-            $table->foreign('institution_id')->references('id')->on('institutions');
-        });
-    }
+{
+    Schema::table('volunteers', function (Blueprint $table) {
+        $table->integer('institution_id')
+            ->unsigned()
+            ->nullable()
+            ->after('email');
+
+        $table->foreign('institution_id')->references('id')->on('institutions');
+    });
+}
 
     /**
      * Reverse the migrations.

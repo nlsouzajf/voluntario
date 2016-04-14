@@ -21,7 +21,7 @@ class CreateCausesTable extends Migration
         // volunteers, causes: cause_volunteer
         Schema::create('cause_volunteer', function (Blueprint $table) {
             $table->integer('cause_id')->unsigned();
-            $table->foreign('cause_id')->references('id')->on('interests')->onDelete('cascade');
+           $table->foreign('cause_id')->references('id')->on('causes')->onDelete('cascade');
             
             $table->integer('volunteer_id')->unsigned();
             $table->foreign('volunteer_id')->references('id')->on('volunteers')->onDelete('cascade');

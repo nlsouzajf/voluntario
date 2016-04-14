@@ -18,10 +18,11 @@ class CauseSeeder extends Seeder
             'Patrimonio Historico',
             'Crianas',
             'Ensino de Adultos'
-        ]
+        ];
         
-        foreach ($causes as $$cause) {
-            App\Cause:create(['cause'=>$cause])->save();
+        foreach ($causes as $cause) 
+        {
+            App\Cause::create(['cause'=> $cause])->save();
         }
     }
 }

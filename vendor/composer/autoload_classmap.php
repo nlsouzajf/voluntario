@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'AddInstiturionIdToVolunteers' => $baseDir . '/database/migrations/2016_04_09_125505_add_institurion_id_to_volunteers.php',
     'AddInstiturionIdToVolunteersTable' => $baseDir . '/database/migrations/2016_04_09_125537_add_institurion_id_to_volunteers_table.php',
     'CauseSeeder' => $baseDir . '/database/seeds/CauseSeeder.php',
     'CauseVolunteerSeeder' => $baseDir . '/database/seeds/CauseVolunteerSeeder.php',
