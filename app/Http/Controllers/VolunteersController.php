@@ -5,6 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\VolunteersRequest;
+
+use App\Institution;
+use App\volunteer;
 
 class VolunteersController extends Controller
 {
@@ -27,7 +32,7 @@ class VolunteersController extends Controller
      */
     public function create()
     {
-         return view('volunteers.create');
+         return view('volunteers.create')->with('institutions', Institution::lists('name','id'));
     }
 
     /**
@@ -62,7 +67,7 @@ class VolunteersController extends Controller
      */
     public function edit($id)
     {
-          return view('volunteers.edit', compact('volunteer'));
+          return view('volunteers.edit', compact('volunteer'))->with('institution', Institution::lists('name','id'));
     }
 
     /**
